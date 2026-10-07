@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <table>
+
+        <form>
+            <label for="minViews">Minimum:</label>
+            <input type="text" name="minViews">
+            <button type="submit">Elküld</button>
+        </form>
+
+        <thead>
+            <tr>
+                <td>Cím</td>
+                <td>Látogatások száma</td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% data.forEach(element=> {
+                %>
+                <tr>
+                    <td>
+                        <%=element.title %>
+                    </td>
+                    <td style='<%= element.views>1000?" font-weight: bold;":"" %>' </td>
+                        <%=element.views%>
+                    </td>
+                </tr>
+                <% }); %>
+        </tbody>
+
+    </table>
+    <a href="/filter">Filter</a>
+    <a href="/new">New</a>
+</body>
+
+</html>
