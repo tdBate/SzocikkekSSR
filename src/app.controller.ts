@@ -42,28 +42,32 @@ export class AppController {
     if (!body.title || !body.url || !body.views) {
       return {
         error: "Nincs megadva mindhárom mező",
-        success: false
+        success: false,
+        arcitcle: body
       }
     }
 
     if (!(parseInt(body.views) >= 0)) {
       return {
         error: "A views nem lehet 0-nál kisebb",
-        success: false
+        success: false,
+        arcitcle: body
       }
     }
 
     if (!(body.title.length >= 1)) {
       return {
         error: "A titlenek legalább 1 karakter hosszúságúnak kell lennie",
-        success: false
+        success: false,
+        arcitcle: body
       }
     }
 
     if (!(body.url.startsWith("https://"))) {
       return {
         error: 'Az URL "https://" -rel kell kezdődjön',
-        success: false
+        success: false,
+        arcitcle: body
       }
     }
 

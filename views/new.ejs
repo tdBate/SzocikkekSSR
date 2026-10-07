@@ -11,13 +11,13 @@
 
     <form method="post">
         <label for="title">Title:</label>
-        <input name="title" type="text"><br>
+        <input name="title" type="text" value="<%= locals.arcitcle?.title %>"><br>
 
         <label for="url">Url:</label>
-        <input name="url" type="text"><br>
+        <input name="url" type="text" value="<%= locals.arcitcle?.url %>"><br>
 
         <label for="views">Views:</label>
-        <input name="views" type="number"><br>
+        <input name="views" type="number" value="<%= locals.arcitcle?.views %>"><br>
 
         <button type="submit">Submit</button>
     </form>
