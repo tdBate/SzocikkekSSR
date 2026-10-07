@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+    <form method="post">
+        <label for="title">Title:</label>
+        <input name="title" type="text"><br>
+
+        <label for="url">Url:</label>
+        <input name="url" type="text"><br>
+
+        <label for="views">Views:</label>
+        <input name="views" type="number"><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <% if (locals.error) {%>
+        <p style="color: red;">
+            <%= locals.error %>
+        </p>
+        <% } %>
+
+            <% if (locals.success) {%>
+                <p style="color: green;">
+                    Sikeres feltöltés!
+                </p>
+
+                <a href="/">Vissza a főoldalra</a>
+                <% } %>
+
+</body>
+
+</html>
